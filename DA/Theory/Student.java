@@ -1,3 +1,4 @@
+package Theory;
 // Develop  and  test  a  Java  class  named  Student  with  the  (private)  instance  fields  namely,  registration 
 // number, name, the date of birth and a list of a maximum of three courses a student has registered in. If 
 // a  student  has  registered  in  less  than  three  courses  then  use  null.  Provide  constructors  for  the  class 

@@ -1,3 +1,5 @@
+package Lab;
+
 import java.util.Arrays;
 // Develop an interface with two methods namely, add and multiply for addition and multiplication of mathematical objects 
 // such as vectors and matrices. Develop a class Vector that implements the interface with necessary data members. 
@@ -6,44 +8,47 @@ import java.util.Arrays;
 // their scalar product and the sum of two matrices and the product of the matrices.
 
 /**
- * This is an interface that provides methods to add and multiply mathematical objects
+ * This is an interface that provides methods to add and multiply mathematical
+ * objects
  */
 interface IMathematicalObject<T> {
     T add(T other);
+
     T multiply(T other);
 }
 
-
-// This is a class that implements a vector of numbers. The vector is represented as an array of doubles
-// The class implements an interface IMathematicalObject that provides methods to add and multiply vectors
 class Vector implements IMathematicalObject<Vector> {
-    double[] values;
+    private double[] vector;
+
+    public double[] getVector() {
+        return vector;
+    }
 
     public Vector(double... values) {
-        this.values = values;
+        this.vector = values;
     }
 
     public Vector add(Vector other) {
-        if (this.values.length != other.values.length) {
+        if (this.vector.length != other.vector.length) {
             throw new IllegalArgumentException("Vectors must be of equal length");
         }
 
-        double[] result = new double[this.values.length];
-        for (int i = 0; i < this.values.length; i++) {
-            result[i] = this.values[i] + other.values[i];
+        double[] result = new double[this.vector.length];
+        for (int i = 0; i < this.vector.length; i++) {
+            result[i] = this.vector[i] + other.vector[i];
         }
 
         return new Vector(result);
     }
 
     public Vector multiply(Vector other) {
-        if (this.values.length != other.values.length) {
+        if (this.vector.length != other.vector.length) {
             throw new IllegalArgumentException("Vectors must be of equal length");
         }
 
-        double[] result = new double[this.values.length];
-        for (int i = 0; i < this.values.length; i++) {
-            result[i] = this.values[i] * other.values[i];
+        double[] result = new double[this.vector.length];
+        for (int i = 0; i < this.vector.length; i++) {
+            result[i] = this.vector[i] * other.vector[i];
         }
 
         return new Vector(result);
@@ -51,21 +56,25 @@ class Vector implements IMathematicalObject<Vector> {
 }
 
 class Matrix implements IMathematicalObject<Matrix> {
-    double[][] values;
+    private double[][] matrix;
+
+    public double[][] getMatrix() {
+        return matrix;
+    }
 
     public Matrix(double[][] values) {
-        this.values = values;
+        this.matrix = values;
     }
 
     public Matrix add(Matrix other) {
-        if (this.values.length != other.values.length || this.values[0].length != other.values[0].length) {
+        if (this.matrix.length != other.matrix.length || this.matrix[0].length != other.matrix[0].length) {
             throw new IllegalArgumentException("Matrices must be of equal size");
         }
 
-        double[][] result = new double[this.values.length][this.values[0].length];
-        for (int i = 0; i < this.values.length; i++) {
-            for (int j = 0; j < this.values[0].length; j++) {
-                result[i][j] = this.values[i][j] + other.values[i][j];
+        double[][] result = new double[this.matrix.length][this.matrix[0].length];
+        for (int i = 0; i < this.matrix.length; i++) {
+            for (int j = 0; j < this.matrix[0].length; j++) {
+                result[i][j] = this.matrix[i][j] + other.matrix[i][j];
             }
         }
 
@@ -73,17 +82,17 @@ class Matrix implements IMathematicalObject<Matrix> {
     }
 
     public Matrix multiply(Matrix other) {
-        if (this.values[0].length != other.values.length) {
+        if (this.matrix[0].length != other.matrix.length) {
             throw new IllegalArgumentException(
                     "Number of columns in first matrix must be equal to number of rows in second matrix");
         }
 
-        double[][] result = new double[this.values.length][other.values[0].length];
-        for (int i = 0; i < this.values.length; i++) {
-            for (int j = 0; j < other.values[0].length; j++) {
+        double[][] result = new double[this.matrix.length][other.matrix[0].length];
+        for (int i = 0; i < this.matrix.length; i++) {
+            for (int j = 0; j < other.matrix[0].length; j++) {
                 double sum = 0.0;
-                for (int k = 0; k < this.values[0].length; k++) {
-                    sum += this.values[i][k] * other.values[k][j];
+                for (int k = 0; k < this.matrix[0].length; k++) {
+                    sum += this.matrix[i][k] * other.matrix[k][j];
                 }
                 result[i][j] = sum;
             }
@@ -99,19 +108,27 @@ public class MathFunctions {
         Vector v2 = new Vector(4, 5, 6);
 
         Vector v3 = v1.add(v2);
-        System.out.println("v1 + v2 = " + Arrays.toString(v3.values));
+        System.out.println("\nv1 + v2 = " + Arrays.toString(v3.getVector()));
 
         Vector v4 = v1.multiply(v2);
 
-        System.out.println("v1 * v2 = " + Arrays.toString(v4.values));
+        System.out.println("\nv1 * v2 = " + Arrays.toString(v4.getVector()));
 
         Matrix m1 = new Matrix(new double[][] { { 1, 2 }, { 3, 4 } });
         Matrix m2 = new Matrix(new double[][] { { 5, 6 }, { 7, 8 } });
 
         Matrix m3 = m1.add(m2);
-        System.out.println("m1 + m2 = " + Arrays.deepToString(m3.values));
+        System.out.println("\n\nm1 + m2 = ");
+        var matrix3 = m3.getMatrix();
+        for (int i = 0; i < matrix3.length; i++) {
+            System.out.println(Arrays.toString(matrix3[i]));
+        }
 
         Matrix m4 = m1.multiply(m2);
-        System.out.println("m1 * m2 = " + Arrays.deepToString(m4.values));
+        System.out.println("\nm1 * m2 = ");
+        var matrix4 = m4.getMatrix();
+        for (int i = 0; i < matrix4.length; i++) {
+            System.out.println(Arrays.toString(matrix4[i]));
+        }
     }
 }
