@@ -1,16 +1,5 @@
-package Lab;
-
 import java.util.Arrays;
-// Develop an interface with two methods namely, add and multiply for addition and multiplication of mathematical objects 
-// such as vectors and matrices. Develop a class Vector that implements the interface with necessary data members. 
-// Develop another class Matrix that implements the interface with necessary data members. 
-// Develop a class containing the main method and show the computation of the sum of two vectors and 
-// their scalar product and the sum of two matrices and the product of the matrices.
 
-/**
- * This is an interface that provides methods to add and multiply mathematical
- * objects
- */
 interface IMathematicalObject<T> {
     T add(T other);
 
@@ -52,6 +41,11 @@ class Vector implements IMathematicalObject<Vector> {
         }
 
         return new Vector(result);
+    }
+
+    // Write a display function
+    public String display() {
+        return Arrays.toString(this.getVector());
     }
 }
 
@@ -100,6 +94,11 @@ class Matrix implements IMathematicalObject<Matrix> {
 
         return new Matrix(result);
     }
+
+    // Write a display function
+    public String display() {
+        return Arrays.deepToString(this.getMatrix());
+    }
 }
 
 public class MathFunctions {
@@ -107,15 +106,21 @@ public class MathFunctions {
         Vector v1 = new Vector(1, 2, 3);
         Vector v2 = new Vector(4, 5, 6);
 
+        System.out.println("\nVector v1 = " + v1.display());
+        System.out.println("Vector v2 = " + v2.display());
+
         Vector v3 = v1.add(v2);
-        System.out.println("\nv1 + v2 = " + Arrays.toString(v3.getVector()));
+        System.out.println("\nv1 + v2 = " + v3.display());
 
         Vector v4 = v1.multiply(v2);
 
-        System.out.println("\nv1 * v2 = " + Arrays.toString(v4.getVector()));
+        System.out.println("\nv1 * v2 = " + v4.display());
 
         Matrix m1 = new Matrix(new double[][] { { 1, 2 }, { 3, 4 } });
         Matrix m2 = new Matrix(new double[][] { { 5, 6 }, { 7, 8 } });
+
+        System.out.println("\nMatrix m1 = " + m1.display());
+        System.out.println("Matrix m2 = " + m2.display());
 
         Matrix m3 = m1.add(m2);
         System.out.println("\n\nm1 + m2 = ");

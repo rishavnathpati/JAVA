@@ -1,6 +1,4 @@
-package Lab;
-// 1.  Create  a  class  called  Complex  for  performing  arithmetic  with  complex  numbers.  Complex  numbers 
-
+// Create  a  class  called  Complex  for  performing  arithmetic  with  complex  numbers.  Complex  numbers
 // have the form realPart + imaginaryPart * i; where i is the imaginary unit.  
 // Write a program to test your class. Use floating-point variables to represent the private data of the class. 
 // Provide a  constructor  that  enables  an  object  of  this  class  to  be  initialized when it’s  declared.  Provide  a 
@@ -50,7 +48,9 @@ public class ComplexTest {
         Complex c2 = new Complex(3.0, 4.0);
         Complex c3 = c1.add(c2);
         Complex c4 = c1.subtract(c2);
+        System.out.println("Addition of c1 and c2:");
         c3.print();
+        System.out.println("Subtraction of c1 and c2:");
         c4.print();
     }
 }
