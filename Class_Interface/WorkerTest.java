@@ -1,5 +1,3 @@
-package Class_Interface;
-
 // Develop  an  abstract  class  named  Worker  with  private  data  members  name  and  address  along  with 
 // the getter and setter methods for the fields, a two-argument constructor and an abstract method called 
 // earnings()  to  compute  the  income  of  a  worker.  Design  another  class  named  PieceWorker  that  should 

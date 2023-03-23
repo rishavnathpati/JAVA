@@ -1,4 +1,3 @@
-package Class_Interface;
 // Develop  a  class  named  Triangle  that  implements  an  interface  called  GeometricObject.  
 // The  interface GeometricObject has the abstract methods 
 // getArea() that computes and returns the area of a geometric object and 

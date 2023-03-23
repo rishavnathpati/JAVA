@@ -1,5 +1,3 @@
-package Class_Interface;
-
 // Develop an interface with two methods namely, withdraw money and deposit money. Develop a class 
 // Account  that  implements  the  interface  with  necessary  private  data  members  such  as  current  account 
 // balance  and  account  number.  Develop  another  class  CreditCardAccount  that  implements  the  interface 
