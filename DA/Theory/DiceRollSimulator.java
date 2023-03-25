@@ -1,5 +1,6 @@
 package Theory;
 // Develop  and  test  an  object-oriented  application  to  simulate  the  rolling  of  two  dice.  The  application 
+
 // should use an object of Random class once to roll the first die and again to roll the second die. The sum 
 // of the two values should then be calculated. Each die can show an integer value from 1 to 6, so the sum 
 // of the values will vary from 2 to 12, with 7 being the most frequent sum, and 2 and 12 the least frequent 
@@ -27,10 +28,11 @@ public class DiceRollSimulator {
         Random random = new Random();
         int sum;
         for (int i = 0; i < n; i++) {
-            int die1 = random.nextInt(1, NUMBER_OF_SIDES + 1);
-            int die2 = random.nextInt(1, NUMBER_OF_SIDES + 1);
+            int die1 = random.nextInt(NUMBER_OF_SIDES) + 1;
+            int die2 = random.nextInt(NUMBER_OF_SIDES) + 1;
             sum = die1 + die2;
-            // System.out.println("Roll " + (i + 1) + ": " + die1 + " + " + die2 + " = " + sum+2);
+            // System.out.println("Roll " + (i + 1) + ": " + die1 + " + " + die2 + " = " +
+            // sum+2);
             diceSums[sum - 2]++;
         }
 

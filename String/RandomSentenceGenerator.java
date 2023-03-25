@@ -1,3 +1,4 @@
+
 // Write  an  application  that  uses  random-number  generation  to  create  sentences.  Use  four  arrays  of 
 // strings called article, noun, verb and preposition. Create a sentence by selecting a word at random from 
 // each  array  in  the  following  order:  article,  noun,  verb,  preposition,  article  and  noun.  As  each  word  is 
@@ -8,8 +9,6 @@
 // contain  the  nouns  "boy",  "girl",  "dog",  "town"  and  "car";  the  verb  array  should  contain  the  verbs 
 // "drove", "jumped", "ran", "walked" and "skipped"; the preposition array should contain the prepositions 
 // "to", "from", "over", "under" and "on"
-package String;
-
 import java.util.Random;
 
 public class RandomSentenceGenerator {

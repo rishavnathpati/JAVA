@@ -9,7 +9,6 @@
 // ending with the letters "ED". 
 // (v)  reads  a  line  of  text,  tokenizes  the  line  with  String  method  split  and  outputs  the  tokens  in  reverse 
 // order. Use space characters as delimiters.
-package String;
 
 public class StringSwitchCase {
     public static void main(String[] args) {

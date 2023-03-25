@@ -2,8 +2,6 @@
 // character.  Modify  this  application  so  that  it  generates  all  possible  three-digit  codes  in  the  range  from 
 // 000 to 255 and attempts to print the corresponding characters
 
-package String;
-
 public class IntToChar {
     public static void main(String[] args) {
         // Clear the console
