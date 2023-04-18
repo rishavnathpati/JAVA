@@ -48,11 +48,11 @@ class Account implements AccountInterface {
 // CreditCardAccount class that implements the interface with necessary data
 // members such as current credit
 // limit and the credit card number
-class CreditCardAccount extends Account {
+class CreditCardAccount implements AccountInterface {
     private double creditLimit;
-
+    private double balance;
     public CreditCardAccount(double balance, int accountNumber, double creditLimit) {
-        super(balance, accountNumber);
+        this.balance = balance;
         this.creditLimit = creditLimit;
     }
 
@@ -62,14 +62,18 @@ class CreditCardAccount extends Account {
 
     @Override
     public void withdraw(double amount) {
-        super.withdraw(amount);
+        balance -= amount;
         creditLimit -= amount * 0.005;
     }
 
     @Override
     public void deposit(double amount) {
-        super.deposit(amount);
+        balance += amount;
         creditLimit += amount;
+    }
+
+    public double getBalance() {
+        return balance;
     }
 }
 
