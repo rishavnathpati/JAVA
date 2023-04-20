@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# Prompt the user for the directory to search
 directory=$(pwd)
 
 # Use find to locate all .class files in the directory and its subdirectories, and delete them
