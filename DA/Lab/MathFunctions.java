@@ -124,14 +124,14 @@ public class MathFunctions {
 
         Matrix m3 = m1.add(m2);
         System.out.println("\n\nm1 + m2 = ");
-        var matrix3 = m3.getMatrix();
+        double[][] matrix3 = m3.getMatrix();
         for (int i = 0; i < matrix3.length; i++) {
             System.out.println(Arrays.toString(matrix3[i]));
         }
 
         Matrix m4 = m1.multiply(m2);
         System.out.println("\nm1 * m2 = ");
-        var matrix4 = m4.getMatrix();
+        double[][] matrix4 = m4.getMatrix();
         for (int i = 0; i < matrix4.length; i++) {
             System.out.println(Arrays.toString(matrix4[i]));
         }
