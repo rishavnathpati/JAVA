@@ -1,10 +1,9 @@
 package GUI;
 
 import javax.swing.*;
-
 public class SFrameExample extends JFrame {
     SFrameExample() {
-        setTitle("Hello Swing");
+        super("Hello Swing");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(300, 300);
         JButton button1 = new JButton("Press");
@@ -16,5 +15,4 @@ public class SFrameExample extends JFrame {
     public static void main(String[] args) {
         new SFrameExample();
     }
-
 }
