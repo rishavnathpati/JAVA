@@ -2,7 +2,6 @@ package GUI;
 
 import java.awt.*;
 import javax.swing.*;
-import java.net.*;
 
 public class LabelFrame extends JFrame {
     private final JLabel label1;
