@@ -1,13 +1,3 @@
-package Theory;
-// Develop  and  test  a  Java  class  named  Student  with  the  (private)  instance  fields  namely,  registration 
-// number, name, the date of birth and a list of a maximum of three courses a student has registered in. If 
-// a  student  has  registered  in  less  than  three  courses  then  use  null.  Provide  constructors  for  the  class 
-// showing  how  one  constructor  can  call  some  other  constructor  and  include  accessor  and  mutator 
-// methods  for  each  of  the  instance  fields.  Include  a  method  into  the  class  to  compute  the  age  of  a 
-// student.  Create  an  array  of  objects  of  three  students  after  receiving  input  from  the  keyboard  using 
-// object of BufferedReader class and display for each student her/his registration number, name and age 
-// in a tabular format with column header.
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;

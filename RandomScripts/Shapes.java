@@ -1,3 +1,5 @@
+package RandomScripts;
+
 import java.util.Random;
 
 // Write an inheritance hierarchy for classes Quadrilateral, Rectangle and Square. Use Quadrilateral as

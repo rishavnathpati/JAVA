@@ -1,3 +1,4 @@
+package RandomScripts;
 public class Telephone {
     public static void main(String[] args) {
         String number = "(555)555-5555";

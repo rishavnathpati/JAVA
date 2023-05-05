@@ -5,7 +5,7 @@
 // name of a student is not entered in uppercase letters and an exception called InvalidRegistrationNumber if either the
 // registration number does not start with 22MCA or the registration number has less than nine characters. Show the usage of
 // these custom exceptions in try-catch-finally blocks inside a driver class.
-
+package RandomScripts;
 import java.util.Scanner;
 
 class Student {

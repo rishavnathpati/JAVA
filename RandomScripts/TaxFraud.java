@@ -1,3 +1,4 @@
+package RandomScripts;
 // Develop a user-defined exception class to throw exception if the tax paid by a person is less than 30%
 // of his/her yearly income. A person is characterized by his/her PAN number and yearly salary. Show the
 // usage of the user-defined exception in a try-catch-finally block and in throws clause

@@ -1,3 +1,4 @@
+package RandomScripts;
 import java.util.*;
 
 public class Main {

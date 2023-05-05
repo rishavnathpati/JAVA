@@ -1,5 +1,4 @@
-package Theory;
-// Develop  and  test  an  object-oriented  application  to  simulate  the  rolling  of  two  dice.  The  application 
+
 
 // should use an object of Random class once to roll the first die and again to roll the second die. The sum 
 // of the two values should then be calculated. Each die can show an integer value from 1 to 6, so the sum 
