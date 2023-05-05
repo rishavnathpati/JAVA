@@ -24,28 +24,15 @@ public class FibonacciFactorialExample {
                 }
             }
         }).start();
-        new Thread(new FactorialThread()).start();
 
-    }
-}
+        new Thread(() -> {
+            int n = 5;
+            int fact = 1;
+            for (int i = 1; i <= n; i++) {
+                fact *= i;
+            }
+            System.out.println("Factorial of " + n + ": " + fact);
+        }).start();
 
-class FibonacciThread implements Runnable {
-
-    @Override
-    public void run() {
-
-    }
-}
-
-class FactorialThread implements Runnable {
-
-    @Override
-    public void run() {
-        int n = 5;
-        int fact = 1;
-        for (int i = 1; i <= n; i++) {
-            fact *= i;
-        }
-        System.out.println("Factorial of " + n + ": " + fact);
     }
 }

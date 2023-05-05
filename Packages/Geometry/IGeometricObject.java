@@ -10,7 +10,7 @@
 // object.
 
 // Path: Geometry/IGeometricObject.java
-package Geometry;
+package Packages.Geometry;
 
 public interface IGeometricObject {
     public double getArea();

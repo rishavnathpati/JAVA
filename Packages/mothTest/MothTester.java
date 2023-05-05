@@ -1,6 +1,6 @@
-package com2.mothTest;
+package Packages.mothTest;
 
-import com.moth.Moth;
+import Packages.moth.Moth;
 
 public class MothTester {
     public static void main(String[] args) {

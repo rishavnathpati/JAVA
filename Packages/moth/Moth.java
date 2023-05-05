@@ -7,7 +7,7 @@
 
 // Path: MothTester.java
 
-package com.moth;
+package Packages.moth;
 
 public class Moth {
     private double x;

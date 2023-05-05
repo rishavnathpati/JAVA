@@ -1,7 +1,7 @@
 // path: Shape/Triangle.java
 package Shape;
 
-import Triangle.Triangle;
+import Packages.Triangle.Triangle;
 
 public class TriangleTest {
     public static void main(String[] args) {

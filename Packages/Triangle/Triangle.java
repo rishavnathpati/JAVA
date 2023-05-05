@@ -9,9 +9,9 @@
 // object.
 
 // Path: Triangle/Triangle.java
-package Triangle;
+package Packages.Triangle;
 
-import Geometry.IGeometricObject;
+import Packages.Geometry.IGeometricObject;
 
 public class Triangle implements IGeometricObject {
     private double side1;
