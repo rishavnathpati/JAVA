@@ -28,6 +28,12 @@ public class StudentGrades implements Runnable {
             gpa = 0.0;
         }
 
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
         // Compute cumulative GPA
         if (gpa > 0) {
             gpa = (gpa + 8.0) / 2.0;
@@ -46,6 +52,19 @@ public class StudentGrades implements Runnable {
         return gpa;
     }
 
+    // toString() method is used to return the string representation of an object.
+
+    @Override
+    public String toString() {
+        return "StudentGrades :" +
+                "name='" + name + '\'' +
+                ", paper1Marks=" + paper1Marks +
+                ", paper2Marks=" + paper2Marks +
+                ", grade='" + grade + '\'' +
+                ", gpa=" + gpa +
+                ' ';
+    }
+
     public static void main(String[] args) {
         // Create fixed number of students
         int numStudents = 5;
@@ -55,6 +74,8 @@ public class StudentGrades implements Runnable {
         for (int i = 0; i < numStudents; i++) {
             students[i] = new StudentGrades("Student " + (i + 1), (int) (Math.random() * 100),
                     (int) (Math.random() * 100));
+
+            System.out.println(students[i]);
         }
 
         // Create and start threads
@@ -65,7 +86,7 @@ public class StudentGrades implements Runnable {
         });
         assignGradesThread.start();
 
-       new Thread(() -> {
+        new Thread(() -> {
             try {
                 // Wait for assignGradesThread to finish
                 assignGradesThread.join();
@@ -74,7 +95,7 @@ public class StudentGrades implements Runnable {
                 for (int i = 0; i < numStudents; i++) {
                     System.out.println(students[i].getName() + " - " + students[i].getGrade());
                 }
-            } catch (InterruptedException e) {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }).start();
