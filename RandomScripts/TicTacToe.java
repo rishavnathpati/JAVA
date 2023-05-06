@@ -48,6 +48,7 @@ public class TicTacToe {
                     throw new IllegalStateException("Invalid input received from the Scanner.");
                 }
             }
+            scanner.close();
 
             // Check if the move is valid
             if (row >= 0 && row < 3 && col >= 0 && col < 3 && board[row][col] == '-') {
