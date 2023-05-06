@@ -1,3 +1,9 @@
+/*Develop a multithreaded program with two threads one of which should assign grade depending on marks secured in two papers by a student 
+following the rules : 100 – 80 Grade A and 80 – 60 Grade B. 
+The thread should also compute the grade point average using 10 for grade A and 8 from grade B. 
+The other thread should display the name of the student and her/his grade. 
+The latter thread should wait until the first thread has finished generating the grades and computing the cumulative grade point average for a student. 
+Show execution of the threads in a loop of a fixed number of iterations. */
 package Threads;
 
 public class StudentGrades implements Runnable {

@@ -35,9 +35,7 @@
 
 package Threads;
 
-import java.util.Random;
-
-public class Threading {
+public class ThreadBasic {
 
     public static void main(String[] args) throws Exception {
 

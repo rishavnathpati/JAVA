@@ -1,9 +1,15 @@
+
+/* Develop a multithreaded program with two threads one of which (a customer) should add product name and quantity of the product into a shopping cart and terminate the process after adding five such products. 
+The other thread should display the name of the product, its quantity and price and the total cost of the products. 
+The latter thread should wait until the first thread has finished adding products to shopping cart. 
+Show execution of the threads in a loop of a fixed number of iterations. */
+
 package Threads;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ShoppingCartExample {
+public class ShoppingCartExecute {
     
     public static void main(String[] args) {
         // Create a new shopping cart
