@@ -12,7 +12,7 @@ The following is a list of directories and their descriptions:
 
 - DA: Code related to Digital Assignment
 - FileIO: Code related to File Input and Output
-- GUI: Code related to Graphical User Interfaces
+- GUI: Code related to Graphical User Interfaces (Swing/Applet/AWT)
 - Interfaces: Code related to Interfaces
 - JDBC: Code related to Java Database Connectivity
 - Objects: Code related to Object-Oriented Programming

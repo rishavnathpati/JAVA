@@ -1,3 +1,9 @@
+/*This program demonstrates various file handling operations in Java. 
+It first creates a new file called `example.txt`, then writes some data to it using a `FileWriter`. It reads the data back from the file using a `BufferedReader` and outputs it to the console. It then appends some additional data to the file using the same `FileWriter`. 
+The program then uses a `RandomAccessFile` to seek to the beginning of the file, reads the first line, and outputs it to the console. It then seeks to the end of the file and appends some more data to the end.
+Finally, the program deletes the file using the `delete()` method of the `File` class. 
+*/
+
 package FileIO;
 
 import java.io.BufferedReader;
