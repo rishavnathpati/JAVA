@@ -10,7 +10,7 @@ The repository is organized into different directories based on the topic. Each 
 
 The following is a list of directories and their descriptions:
 
-- DA: Code related to Data Analysis
+- DA: Code related to Digital Assignment
 - FileIO: Code related to File Input and Output
 - GUI: Code related to Graphical User Interfaces
 - Interfaces: Code related to Interfaces
