@@ -29,8 +29,8 @@ public class StudentGrades implements Runnable {
         }
 
         try {
-            Thread.sleep(500);
-        } catch (InterruptedException e) {
+            Thread.sleep(100);
+        } catch (Exception e) {
             e.printStackTrace();
         }
 

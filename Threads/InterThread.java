@@ -52,7 +52,6 @@ class Producer implements Runnable {
         }
 
     }
-
 }
 
 class Consumer implements Runnable {
@@ -74,7 +73,6 @@ class Consumer implements Runnable {
             }
         }
     }
-
 }
 
 public class InterThread {
@@ -83,6 +81,5 @@ public class InterThread {
         Q q = new Q();
         new Producer(q);
         new Consumer(q);
-
     }
 }

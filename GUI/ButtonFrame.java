@@ -17,8 +17,8 @@ public class ButtonFrame extends JFrame {
 
         add(plainJButton); // add plainJButton to JFrame
 
-        Icon icon1 = new ImageIcon(("restart.gif"));
-        Icon icon2 = new ImageIcon(("icon8.gif"));
+        Icon icon1 = new ImageIcon(("GUI/trash.png"));
+        Icon icon2 = new ImageIcon(("GUI/trash.png"));
 
         fancyJButton = new JButton("Fancy Button", icon1); // set image
         fancyJButton.setRolloverIcon(icon2); // set rollover image

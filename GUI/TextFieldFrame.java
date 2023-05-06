@@ -47,6 +47,7 @@ public class TextFieldFrame extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setSize(350, 100);
 		setLocation(100, 100);
+		pack();
 		setVisible(true);
 	}
 
