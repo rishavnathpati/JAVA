@@ -76,11 +76,12 @@ public class CalculatorGUI extends JFrame {
         Container container = getContentPane();
         container.setLayout(new BorderLayout());
         container.add(textField, BorderLayout.NORTH);
-        container.add(buttonPanel, BorderLayout.CENTER);
+        container.add(buttonPanel, BorderLayout.SOUTH);
 
         // Set frame properties
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(300, 300);
+        pack();
+        // setSize(300, 300);
         setVisible(true);
     }
 

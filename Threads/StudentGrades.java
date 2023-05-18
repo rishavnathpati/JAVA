@@ -90,6 +90,7 @@ public class StudentGrades implements Runnable {
                 students[i].run();
             }
         });
+        
         assignGradesThread.start();
 
         new Thread(() -> {

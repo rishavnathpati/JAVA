@@ -39,7 +39,7 @@ public class ThreadBasic {
 
     public static void main(String[] args) throws Exception {
 
-        Thread thi = new Thread(() -> {
+        new Thread(() -> {
             for (int i = 0; i < 10; i++) {
                 System.out.println("Hi");
 
@@ -49,35 +49,39 @@ public class ThreadBasic {
                     e.printStackTrace();
                 }
             }
-        });
+        }).start();
+        ;
 
-        Thread thello = new Thread(new Hello());
+        new Thread(() -> {
+            for (int i = 0; i < 10; i++) {
+                System.out.println("Hello");
 
-        // hi.run();
-        // hello.run();
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
 
-        thi.start();
-        thi.join();
-
-        thello.start();
-        thello.join();
+        }).start();
+        ;
 
         System.out.println("Done!!!");
     }
 
 }
 
-class Hello implements Runnable {
-    public void run() {
-        for (int i = 0; i < 10; i++) {
-            System.out.println("Hello");
+// class Hello implements Runnable {
+// public void run() {
+// for (int i = 0; i < 10; i++) {
+// System.out.println("Hello");
 
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
+// try {
+// Thread.sleep(1000);
+// } catch (InterruptedException e) {
+// e.printStackTrace();
+// }
+// }
 
-    }
-}
+// }
+// }

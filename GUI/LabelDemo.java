@@ -124,7 +124,7 @@ public class LabelDemo extends Frame implements ActionListener, ItemListener {
 		mbar.add(view);
 
 		setMenuBar(mbar);
-		pack();
+		// pack();
 
 	}
 
