@@ -38,8 +38,13 @@ public class PrintArrayMain {
             arr1[i] = sc.nextInt();
 
         PrintArray p1 = new PrintArray();
+
+        System.out.println("Enter the lowSubscript and highSubscript: ");
+        int lowSubscript = sc.nextInt();
+        int highSubscript = sc.nextInt();
+        System.out.println("The elements of the Integer array from index " + lowSubscript + " to " + highSubscript + " are: ");
         try {
-            System.out.println("The number of elements printed are: " + p1.printArray(arr1, 0, n - 1));
+            System.out.println("\nThe number of elements printed are: " + p1.printArray(arr1, lowSubscript, highSubscript));
         } catch (InvalidSubscriptException e) {
             System.out.println(e.getMessage());
         }

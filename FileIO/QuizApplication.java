@@ -19,7 +19,7 @@ public class QuizApplication {
         try {
             FileReader fileReader = new FileReader(fileName);
             BufferedReader bufferedReader = new BufferedReader(fileReader);
-            
+            Scanner scanner = new Scanner(System.in);
             String line;
             while ((line = bufferedReader.readLine()) != null) {
                 String[] questionAnswer = line.split("\\|");
@@ -28,7 +28,7 @@ public class QuizApplication {
                 
                 System.out.println(question);
                 
-                Scanner scanner = new Scanner(System.in);
+                
                 String userAnswer = scanner.nextLine();
                 
                 if (userAnswer.equalsIgnoreCase(answer)) {
@@ -40,6 +40,7 @@ public class QuizApplication {
             }
             
             bufferedReader.close();
+            scanner.close();
             
         } catch (IOException e) {
             System.out.println("Error reading file " + fileName);
