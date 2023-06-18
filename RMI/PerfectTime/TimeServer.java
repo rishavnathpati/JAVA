@@ -1,4 +1,4 @@
-package RMI;
+package RMI.PerfectTime;
 
 import java.rmi.*;
 import java.rmi.registry.*;

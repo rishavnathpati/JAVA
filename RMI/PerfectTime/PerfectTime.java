@@ -1,4 +1,4 @@
-package RMI;
+package RMI.PerfectTime;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;

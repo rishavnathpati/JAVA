@@ -1,4 +1,4 @@
-package RMI;
+package RMI.PerfectTime;
 
 import java.net.MalformedURLException;
 import java.rmi.Naming;
